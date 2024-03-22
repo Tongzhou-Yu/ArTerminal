@@ -4,40 +4,28 @@ using System.Net.Sockets;
 using extOSC;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.ARFoundation;
-public class Pilot : MonoBehaviour
+public class PilotReceiver : MonoBehaviour
 {
-    #region Server
+    #region Receiver
     public Text timeText;
     Boolean isLinked = false;
     private string timeValue;
     private float startTime;
     public Text localIpText;
-    private OSCReceiver oscServer;
+    private OSCReceiver oscReceiver;
     public Text instructionText;
     private string stringValue;
     public RawImage linkedImage;
     #endregion
-
-    #region ARFoundation
-    public ARTrackedImageManager trackedImageManager;
-    public Text iPhonePositionText;
-    private ARTrackedImage trackedImage;
-    #endregion
-
-    void Awake()
-    {
-        trackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
-    }
     void Start()
     {
         linkedImage.color = Color.red;
         DisplayLocalIPAddress();
         // Creating a receiver.
-        oscServer = gameObject.AddComponent<OSCReceiver>();
-        oscServer.LocalPort = 9000;
-        oscServer.Bind("/terminal/", MessageReceived);
-        oscServer.Bind("/time/", TimeReceived);
+        oscReceiver = gameObject.AddComponent<OSCReceiver>();
+        oscReceiver.LocalPort = 9000;
+        oscReceiver.Bind("/terminal/", MessageReceived);
+        oscReceiver.Bind("/time/", TimeReceived);
     }
     void MessageReceived(OSCMessage message)
     {
@@ -49,12 +37,6 @@ public class Pilot : MonoBehaviour
     }
     void Update()
     {
-        if (trackedImage != null)
-        {
-            // 计算iPhone在新坐标系中的位置
-            Vector3 relativePosition = trackedImage.transform.InverseTransformPoint(Camera.main.transform.position);
-            iPhonePositionText.text = "iPhone Position:" + " X: " + relativePosition.x.ToString() + " Y: " + relativePosition.y.ToString() + " Z: " + relativePosition.z.ToString();
-        }
         instructionText.text = stringValue;
         if (stringValue == "linked" && !isLinked)
         {
@@ -107,26 +89,11 @@ public class Pilot : MonoBehaviour
                     }
                 }
             }
-
             if (localIP != "")
             {
                 break;
             }
         }
-
         localIpText.text = "Local IP Address: " + localIP;
-    }
-
-    void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
-    {
-        foreach (var newTrackedImage in eventArgs.added)
-        {
-            trackedImage = newTrackedImage;
-        }
-
-        foreach (var updatedTrackedImage in eventArgs.updated)
-        {
-            trackedImage = updatedTrackedImage;
-        }
     }
 }

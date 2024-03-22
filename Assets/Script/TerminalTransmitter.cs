@@ -5,7 +5,7 @@ using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.UI;
 using extOSC;
-public class Terminal : MonoBehaviour
+public class TerminalTransmitter : MonoBehaviour
 {
     #region Client
     public Text timeText;
@@ -17,7 +17,6 @@ public class Terminal : MonoBehaviour
     public InputField instructionField;
     public Button instructionButton;
     #endregion
-
     #region ARFoundation
     public RawImage positionImage;
     #endregion
@@ -26,7 +25,7 @@ public class Terminal : MonoBehaviour
         positionImage.gameObject.SetActive(false);
         ipImage.color = Color.red;
         DisplayLocalIPAddress();
-        oscClient = gameObject.AddComponent<OSCTransmitter>();
+        oscClient = gameObject.GetComponent<OSCTransmitter>();
 
         linkButton.onClick.AddListener(delegate
         {

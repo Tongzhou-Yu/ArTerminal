@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: extOSC
+  companyName: yuu
+  productName: ARTerminal
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -162,7 +162,7 @@ PlayerSettings:
     Android: com.Company.ProductName
     Standalone: unity.DefaultCompany.extOSC
     Tizen: com.Company.ProductName
-    iPhone: com.DefaultCompany.extOSC
+    iPhone: com.yuu.ARTerminal
     tvOS: com.Company.ProductName
   buildNumber:
     Standalone: 0
@@ -194,7 +194,7 @@ PlayerSettings:
   VisionOSSdkVersion: 0
   VisionOSTargetOSVersionString: 1.0
   uIPrerenderedIcon: 0
-  uIRequiresPersistentWiFi: 0
+  uIRequiresPersistentWiFi: 1
   uIRequiresFullScreen: 1
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
