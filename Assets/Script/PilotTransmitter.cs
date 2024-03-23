@@ -4,6 +4,8 @@ using UnityEngine.Networking;
 using extOSC;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
+using Unity.XR.CoreUtils;
+using Unity.Burst.Intrinsics;
 public class PilotTransmitter : MonoBehaviour
 {
     #region NetworkPermissionTrigger
@@ -15,6 +17,7 @@ public class PilotTransmitter : MonoBehaviour
     public InputField ipField;
     #endregion
     #region ARFoundation
+    public XROrigin xROrigin;
     public ARTrackedImageManager trackedImageManager;
     public Text iPhonePositionText;
     private ARTrackedImage trackedImage;
@@ -36,8 +39,12 @@ public class PilotTransmitter : MonoBehaviour
         string ip = ipField.text;
         oscTransmitter.RemoteHost = ip;
         // 计算iPhone在新坐标系中的位置
-        Vector3 relativePosition = trackedImage.transform.InverseTransformPoint(Camera.main.transform.position);
+        Vector3 relativePosition = trackedImage.transform.InverseTransformPoint(xROrigin.Camera.transform.localPosition);
+        relativePosition = new Vector3(relativePosition.x, relativePosition.z, relativePosition.y); // iPhone在新坐标系中的位置，我们需要将其y和z坐标互换
+        relativePosition -= new Vector3(0, 0, 0.5f); // iPhone在新坐标系中的位置，我们需要将其向前移动0.5个单位
+        relativePosition = new Vector3(relativePosition.x, relativePosition.y, -relativePosition.z); // iPhone在新坐标系中的位置，我们需要将其z坐标取反
         iPhonePositionText.text = "iPhone Position:" + " X: " + relativePosition.x.ToString() + " Y: " + relativePosition.y.ToString() + " Z: " + relativePosition.z.ToString();
+        Vector3 iPhoneRotation = Camera.main.transform.eulerAngles;
         // Create message
         var message = new OSCMessage("/pilot/");
         message.AddValue(OSCValue.Float(relativePosition.x));

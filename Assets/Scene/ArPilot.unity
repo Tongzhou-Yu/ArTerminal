@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ipField: {fileID: 1948628473}
+  xROrigin: {fileID: 1655178037}
   trackedImageManager: {fileID: 1655178039}
   iPhonePositionText: {fileID: 231036185}
 --- !u!114 &130745476
@@ -203,7 +204,7 @@ MonoBehaviour:
   _autoConnect: 1
   _closeOnPause: 0
   _mapBundle: {fileID: 0}
-  _workInEditor: 0
+  _workInEditor: 1
   _localHostMode: 0
   _localPortMode: 2
   _localReceiver: {fileID: 0}

@@ -5,6 +5,7 @@ using extOSC;
 
 public class TerminalReceiver : MonoBehaviour
 {
+    public Transform coordinateCenterObject;
     public GameObject pilotObject;
     private OSCReceiver oscReceiver;
     private Vector3 positionValue;
@@ -23,6 +24,6 @@ public class TerminalReceiver : MonoBehaviour
     }
     void Update()
     {
-        pilotObject.transform.position = positionValue;
+        pilotObject.transform.position = positionValue + coordinateCenterObject.position;
     }
 }
