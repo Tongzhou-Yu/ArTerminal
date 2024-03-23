@@ -8,4 +8,4 @@
 1. sync time counting with terminal
 2. get local IP address
 3. get message from terminal
-4. check relative position of the device to the terminal with image tracking
+4. sync relative position of the device to the terminal with image tracking
