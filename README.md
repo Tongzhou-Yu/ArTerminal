@@ -1,3 +1,4 @@
+This respository is experimented as the minimum project file for achieving the idea of Milgram and Kishino's Reality-Virtuality continuum (1994).
 ## terminal scene you can use in local computer as control panel
 1. count time
 2. get local IP address
