@@ -1,5 +1,5 @@
-This resposito![ArTerminal](https://github.com/Tongzhou-Yu/ArTerminal/assets/45578227/dc477736-880a-428f-a7fb-b6846be1e6f2)
-ry is experimented as the minimum project file for achieving the idea of Milgram and Kishino's Reality-Virtuality continuum (1994).
+![ArTerminal](https://github.com/Tongzhou-Yu/ArTerminal/assets/45578227/dc477736-880a-428f-a7fb-b6846be1e6f2)  
+This respository is experimented as the minimum project file for achieving the idea of Milgram and Kishino's Reality-Virtuality continuum (1994).
 ## terminal scene you can use in local computer as control panel
 1. count time
 2. get local IP address
