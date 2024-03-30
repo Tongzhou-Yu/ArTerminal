@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" width="360" src="ArTerminal.png" />
+  <img align="center" width="120" src="ArTerminal.png" />
 
   <h1 align="center">AR Terminal 增强现实航站楼</h1>
   <h3 align="center">This respository is experimented as the minimum project file for achieving the idea of Milgram and Kishino's Reality-Virtuality continuum (1994).</h3>
