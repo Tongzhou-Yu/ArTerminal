@@ -6,7 +6,7 @@
 
 </p>
 
-  ![](https://img.shields.io/badge/unity-2018.3%20or%20later-green.svg)
+  ![](https://img.shields.io/badge/unity-2022.3-darkgreen.svg)
 
 ## terminal scene you can use in local computer as control panel
 1. count time
