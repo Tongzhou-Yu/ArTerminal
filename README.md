@@ -1,4 +1,4 @@
-![ArTerminal](https://github.com/Tongzhou-Yu/ArTerminal/assets/45578227/1ce6310a-ec5d-48ca-bb84-f1fc252b0fd6)<p align="center">
+<p align="center">
   <img align="center" width="360" src="ArTerminal.png" />
 
   <h1 align="center">ToF, OK!</h1>
