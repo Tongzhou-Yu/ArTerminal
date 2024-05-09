@@ -8,6 +8,7 @@
 
   ![](https://img.shields.io/badge/unity-2022.3-darkgreen.svg)
 
+<img align="center" width="120" src="sync.jpg" />
 ## terminal scene you can use in local computer as control panel
 1. count time
 2. get local IP address
