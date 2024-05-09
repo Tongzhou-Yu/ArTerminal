@@ -8,9 +8,6 @@
 
   ![](https://img.shields.io/badge/unity-2022.3-darkgreen.svg)
 
-<p align="center">
-<img align="center" width="640" src="sync.jpg" />  
-</p>
 ## terminal scene you can use in local computer as control panel
 1. count time
 2. get local IP address
@@ -22,3 +19,6 @@
 2. get local IP address
 3. get message from terminal
 4. sync relative position of the device to the terminal with image tracking
+<p align="center">
+<img align="center" src="sync.jpg" />  
+</p>
