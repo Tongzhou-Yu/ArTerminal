@@ -1,8 +1,8 @@
 <p align="center">
   <img align="center" width="360" src="ArTerminal.png" />
 
-  <h1 align="center">ToF, OK!</h1>
-  <h3 align="center">A pro & ar UGC tool to jumpstart your virtual fashion projects!</h3>
+  <h1 align="center">AR Terminal</h1>
+  <h3 align="center">A pro & ar OSC temple to control ARKit through PC Unity!</h3>
 </p>
 
 This respository is experimented as the minimum project file for achieving the idea of Milgram and Kishino's Reality-Virtuality continuum (1994).
