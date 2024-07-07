@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" width="360" src="ToF%2COK!.png" />
+  <img align="center" width="360" src="ArTerminal.png" />
 
   <h1 align="center">ToF, OK!</h1>
   <h3 align="center">A pro & ar UGC tool to jumpstart your virtual fashion projects!</h3>
@@ -18,4 +18,4 @@ This respository is experimented as the minimum project file for achieving the i
 3. get message from terminal
 4. sync relative position of the device to the terminal with image tracking
     
-<img align="center" width="360" src="ToF%2COK!.png" />
+<img align="center" src="sync.jpg" />
